@@ -20,5 +20,32 @@ namespace FizzBuzz.Tests
             Assert.IsNotNull(result);
             Assert.AreEqual(expectedResult, result);
         }
+
+        [Test]
+        public void CalculatorService_Calculator_ReturnsFizz()
+        {
+            var expectedResult = "Fizz";
+            var result = _calculatorService.Calculator(9);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(expectedResult, result);
+        }
+
+        [Test]
+        public void CalculatorService_Calculator_ReturnsBuzz()
+        {
+            var expectedResult = "Buzz";
+            var result = _calculatorService.Calculator(10);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(expectedResult, result);
+        }
+
+        [Test]
+        public void CalculatorService_Calculator_ReturnsInputNumber()
+        {
+            var expectedResult = "8";
+            var result = _calculatorService.Calculator(8);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }
